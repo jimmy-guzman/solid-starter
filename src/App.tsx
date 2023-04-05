@@ -37,7 +37,16 @@ const App = () => {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <p>Click on logos to learn more</p>
+      <p>
+        Click on logos to learn more or visit the{' '}
+        <a
+          href='https://github.com/jimmy-guzman/solid-starter#solid-starter'
+          target='_blank'
+          rel='noreferrer'
+        >
+          repo
+        </a>
+      </p>
     </div>
   )
 }

@@ -17,10 +17,8 @@
 [![Github Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)][Github Actions]
 
 - ⚡️ [vite][vite] for fast server start and HMR
-  - absolute imports and module path aliases for easier imports
 - 💄 [tailwindcss][tailwindcss] for utility-first CSS
 - 🧪 [vitest][vitest] for fast testing
-  - [Testing Library][Testing Library] for encouraging good testing practices
 - 🧪 [Playwright][Playwright] for fast and reliable e2e testing
 - 🩺 [eslint][eslint] for static analysis
 - 🎨 [prettier][prettier] for formatting

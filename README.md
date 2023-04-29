@@ -14,7 +14,7 @@
 [![eslint](https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white)][eslint]
 [![prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)][prettier]
 [![pnpm](https://img.shields.io/badge/pnpm-%234a4a4a.svg?style=for-the-badge&logo=pnpm&logoColor=f69220)][pnpm]
-[![Github Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)][Github Actions]
+[![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)][GitHub Actions]
 
 - ⚡️ [vite][vite] for fast server start and HMR
 - 💄 [tailwindcss][tailwindcss] for utility-first CSS
@@ -23,7 +23,7 @@
 - 🩺 [eslint][eslint] for static analysis
 - 🎨 [prettier][prettier] for formatting
 - ⚡️ [pnpm][pnpm] for fast and consistent installs
-- 👷 [Github Actions][Github Actions] for easy workflow automation
+- 👷 [GitHub Actions][GitHub Actions] for easy workflow automation
 
 ## Getting Started
 
@@ -119,6 +119,6 @@ If you need to do more, I recommend the following libraries:
 [Playwright]: https://playwright.dev
 [prettier]: https://prettier.io
 [pnpm]: https://pnpm.io
-[Github Actions]: https://github.com/features/actions
+[GitHub Actions]: https://github.com/features/actions
 
 <!-- features references end -->

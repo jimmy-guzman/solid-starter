@@ -13,8 +13,8 @@ jobs:
       - name: 📦 Install
         uses: ./.github/actions/install
         with:
-          node-version: 18
-          pnpm-version: 8.3.1
+          node-version: 20
+          pnpm-version: 8.10.5
 
       - name: 🚨 Lint
         run: pnpm lint
@@ -23,7 +23,7 @@ jobs:
         run: pnpm format
 
       - name: 🏷️ Check Types
-        run: pnpm check-types
+        run: pnpm typecheck
 
       - name: ✅ Test
         run: pnpm coverage

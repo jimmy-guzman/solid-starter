@@ -1,20 +1,20 @@
-import { test, expect } from '@playwright/test'
+import { expect, test } from '@playwright/test'
 
 test('has title', async ({ page }) => {
-  await page.goto('http://localhost:5173/')
+  await page.goto('/')
 
   await expect(page).toHaveTitle(/Solid Starter/)
 })
 
 test.describe('external links', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('http://localhost:5173/')
+    await page.goto('/')
   })
 
   test('opened vite docs', async ({ page, context }) => {
     const pagePromise = context.waitForEvent('page')
 
-    await page.getByRole('link', { name: /vite logo/i }).click()
+    await page.getByRole('link', { name: /vite/i }).click()
 
     const newPage = await pagePromise
 
@@ -26,7 +26,7 @@ test.describe('external links', () => {
   test('opened Solid docs', async ({ page, context }) => {
     const pagePromise = context.waitForEvent('page')
 
-    await page.getByRole('link', { name: /solid logo/i }).click()
+    await page.getByRole('link', { name: /solid/i }).click()
 
     const newPage = await pagePromise
 
@@ -38,7 +38,7 @@ test.describe('external links', () => {
   test('opened TypeScript docs', async ({ page, context }) => {
     const pagePromise = context.waitForEvent('page')
 
-    await page.getByRole('link', { name: /TypeScript logo/i }).click()
+    await page.getByRole('link', { name: /TypeScript/i }).click()
 
     const newPage = await pagePromise
 
@@ -50,7 +50,7 @@ test.describe('external links', () => {
   test('opened tailwindcss docs', async ({ page, context }) => {
     const pagePromise = context.waitForEvent('page')
 
-    await page.getByRole('link', { name: /tailwindcss logo/i }).click()
+    await page.getByRole('link', { name: /tailwindcss/i }).click()
 
     const newPage = await pagePromise
 
@@ -62,14 +62,14 @@ test.describe('external links', () => {
   test('opened repo', async ({ page, context }) => {
     const pagePromise = context.waitForEvent('page')
 
-    await page.getByRole('link', { name: /repo/i }).click()
+    await page.getByRole('link', { name: 'GitHub' }).click()
 
     const newPage = await pagePromise
 
     await newPage.waitForLoadState()
 
     await expect(newPage).toHaveURL(
-      'https://github.com/jimmy-guzman/solid-starter#solid-starter'
+      'https://github.com/jimmy-guzman/solid-starter'
     )
   })
 })

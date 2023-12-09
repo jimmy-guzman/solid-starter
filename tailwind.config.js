@@ -1,3 +1,7 @@
+import { addDynamicIconSelectors } from '@iconify/tailwind'
+import typography from '@tailwindcss/typography'
+import daisyui from 'daisyui'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
@@ -6,8 +10,9 @@ export default {
   },
   daisyui: {
     // see https://daisyui.com/docs/themes/ for further customization
-    themes: ['dark'],
+    themes: ['dark', 'light'],
+    prefix: 'dsy-',
     logs: false,
   },
-  plugins: [require('@tailwindcss/typography'), require('daisyui')],
+  plugins: [typography, daisyui, addDynamicIconSelectors()],
 }

@@ -1,52 +1,52 @@
 import { createSignal } from 'solid-js'
 
-import solidLogo from './assets/solid.svg'
-import tailwindcssLogo from './assets/tailwindcss.svg'
-import typeScriptLogo from './assets/typescript.svg'
-import viteLogo from './assets/vite.svg'
-import { Logo } from './components/Logo'
+import { XLink } from './components/XLink'
 
 const App = () => {
   const [count, setCount] = createSignal(0)
 
   return (
-    <div class='container prose mx-auto p-4 text-center'>
-      <div class='mb-8 flex items-center justify-center gap-8'>
-        <Logo name='Vite' link='https://vitejs.dev' imgSrc={viteLogo} />
-        <Logo name='Solid' link='https://docs.solidjs.com' imgSrc={solidLogo} />
-        <Logo
-          name='TypeScript'
-          link='https://www.typescriptlang.org'
-          imgSrc={typeScriptLogo}
-        />
-        <Logo
-          name='tailwindcss'
-          link='https://tailwindcss.com'
-          imgSrc={tailwindcssLogo}
-        />
+    <div class='md:container md:mx-auto'>
+      <div class='dsy-hero min-h-screen'>
+        <div class='dsy-hero-content flex-col gap-8 lg:flex-row-reverse'>
+          <div class='flex gap-4 lg:grid'>
+            <div class='text-center'>
+              <span class='icon-[logos--vitejs] text-center text-5xl sm:text-8xl' />
+            </div>
+            <div class='text-center'>
+              <span class='icon-[logos--solidjs-icon] animate-[spin_20s_linear_infinite] text-5xl sm:text-8xl' />
+            </div>
+            <div class='text-center'>
+              <span class='icon-[logos--typescript-icon] text-center text-5xl sm:text-8xl' />
+            </div>
+            <div>
+              <span class='icon-[logos--tailwindcss-icon] text-5xl sm:text-8xl' />
+            </div>
+          </div>
+          <div class='flex flex-col gap-4'>
+            <h1 class='inline bg-gradient-to-r from-primary to-secondary bg-clip-text text-8xl font-bold text-transparent'>
+              Solid Starter
+            </h1>
+            <p class='py-6'>
+              🍱 Another opinionated <XLink to='SolidJS' /> Starter using{' '}
+              <XLink to='Vite' />, <XLink to='TypeScript' /> and{' '}
+              <XLink to='tailwindcss' />.
+            </p>
+            <div class='flex justify-center gap-2 sm:justify-end'>
+              <button
+                class='dsy-btn dsy-btn-neutral'
+                onClick={() => {
+                  setCount((prevCount) => prevCount + 1)
+                }}
+              >
+                Count is {count()}
+              </button>
+              <XLink to='Deploy' variant='secondary' asButton />
+              <XLink to='GitHub' variant='primary' asButton />
+            </div>
+          </div>
+        </div>
       </div>
-      <h1>Vite + Solid + TypeScript + tailwindcss</h1>
-      <div>
-        <button
-          class='btn'
-          onClick={() => setCount((prevCount) => prevCount + 1)}
-        >
-          count is {count()}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p>
-        Click on logos to learn more or visit the{' '}
-        <a
-          href='https://github.com/jimmy-guzman/solid-starter#solid-starter'
-          target='_blank'
-          rel='noreferrer'
-        >
-          repo
-        </a>
-      </p>
     </div>
   )
 }

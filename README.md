@@ -22,12 +22,12 @@
 - 🧪 [Playwright][Playwright] for fast and reliable e2e testing
 - 🩺 [eslint][eslint] for static analysis
 - 🎨 [prettier][prettier] for formatting
-- ⚡️ [pnpm][pnpm] for fast and consistent installs
+- 📦 [pnpm][pnpm] for fast and consistent installs
 - 👷 [GitHub Actions][GitHub Actions] for easy workflow automation
 
-## Getting Started
+## 🏁 Getting Started
 
-Make sure you're using [node 18](https://nodejs.dev/en/about/releases), I recommend using [fnm](https://github.com/Schniz/fnm) which will allow to simply run:
+Make sure you're using [node 20](https://nodejs.dev/en/about/releases), I recommend using [fnm](https://github.com/Schniz/fnm) which will allow you to simply run:
 
 ```
 fnm use
@@ -39,6 +39,12 @@ First install dependencies with [pnpm](https://pnpm.io/installation), by running
 pnpm install
 ```
 
+And to download new browsers for Playwright, run the following command:
+
+```
+pnpm exec playwright install
+```
+
 Then to run the development server, run the following command:
 
 ```
@@ -47,55 +53,23 @@ pnpm dev
 
 Your application will be available at http://localhost:5173/ ❤️
 
-## Available Tasks
+## 🧞 Available Tasks
 
-To build for production, run the following command:
-
-```
-pnpm build
-```
-
-To build preview production build, run the following command:
-
-```
-pnpm preview
-```
-
-_must have ran `pnpm build` previously_
-
-To run unit tests, run the following command:
-
-```
-pnpm test
-```
-
-To run e2e tests, run the following command:
-
-```
-pnpm e2e
-```
-
-To lint, run the following command:
-
-```
-pnpm lint
-```
-
-_you can run `pnpm lint:fix` to fix all lint errors_
-
-To format, run the following command:
-
-```
-pnpm format
-```
-
-_you can run `pnpm format:fix` to fix all format errors_
-
-To validate everything, run the following command:
-
-```
-pnpm validate
-```
+| Command           | Action                                            |
+| :---------------- | :------------------------------------------------ |
+| `pnpm install`    | Installs dependencies                             |
+| `pnpm dev`        | Starts local dev server at http://localhost:5173/ |
+| `pnpm build`      | Build your production site to `./dist/`           |
+| `pnpm preview`    | Preview your build locally, before deploying      |
+| `pnpm test`       | Unit tests your code with vitest                  |
+| `pnpm e2e`        | E2E tests your code with playwright               |
+| `pnpm lint`       | Lints everything with eslint                      |
+| `pnpm lint:fix`   | Fixes lint errors with eslint                     |
+| `pnpm format`     | Checks formatting with prettier                   |
+| `pnpm format:fix` | Fixes formatting errors with prettier             |
+| `pnpm typecheck`  | Checks types with TypeScript                      |
+| `pnpm deps:bump`  | Interactively updates dependencies                |
+| `pnpm deps:check` | Checks dependencies                               |
 
 ## Recommendations
 
